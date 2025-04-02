@@ -1,7 +1,14 @@
-#import <React/RCTViewManager.h>
+#import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_MODULE(NativeKeyboardManager, RCTViewManager)
+@interface RCT_EXTERN_MODULE(NativeKeyboard, NSObject)
 
-RCT_EXPORT_VIEW_PROPERTY(onTextChange, RCTBubblingEventBlock)
+RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
+                 withResolver:(RCTPromiseResolveBlock)resolve
+                 withRejecter:(RCTPromiseRejectBlock)reject)
+
++ (BOOL)requiresMainQueueSetup
+{
+  return NO;
+}
 
 @end

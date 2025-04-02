@@ -12,11 +12,11 @@ const LINKING_ERROR =
   '- You are not using Expo Go\n';
 
 type NativeKeyboardProps = {
-  style?: ViewStyle;
-  onTextChange?: (event: { nativeEvent: { text: string } }) => void;
+  color: string;
+  style: ViewStyle;
 };
 
-const ComponentName = 'NativeKeyboardManager';
+const ComponentName = 'NativeKeyboardView';
 
 export const NativeKeyboardView =
   UIManager.getViewManagerConfig(ComponentName) != null
